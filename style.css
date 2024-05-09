@@ -10,10 +10,13 @@ header, main {
 
 header {
   text-align: center;
-  background-color: #2b4e83;
+  background-color: #cd7d2e;
   color: white;
   padding: 10px 10px;
   box-sizing: border-box;
+}
+h1{
+  color: black;
 }
 
 ul {
@@ -23,10 +26,11 @@ ul {
 
 li {
   position: relative;
-  background-color: #efefef;
+  background-color: #75cee4;
   margin: 0;
   padding: 12px 20px;
   list-style-type: none;
+  cursor:pointer;
 }
 
 li.done {

@@ -1,7 +1,7 @@
 
 let addButton = document.querySelector('#add-button');     
 let inputField = document.querySelector('#todo-input');
-let todoContainer = document.querySelector('#todo-list');
+let todoContainer = document.querySelector('#todo-list1');
 
 
 // aggiungere click listener a addButton e al click creare un todo.
@@ -34,7 +34,7 @@ createtodo(todotext);
 
 
 
-// creo la funzione createtoto: che ha argomento todotext, assehna alla variabile todo il metodo createElement che a sua volta andrà a crere sul html l'elemento li.
+// creo la funzione createtodo: che ha argomento todotext, assehna alla variabile todo il metodo createElement che a sua volta andrà a crere sul html l'elemento li.
 //  sul newtodo uso la proprietà textContent  che inserirà del testo preso dalla variabile todotext
 // successivamente alla variabile snewtodo che contiene il nuovo elemento li aggiungo il metodo append che andrà ad appendere li al suo parennte ul.
 function createtodo(todotext){
@@ -42,6 +42,9 @@ function createtodo(todotext){
    newtodo.textContent = todotext;
 console.log(newtodo)
 todoContainer.append(newtodo);
+ newtodo.addEventListener('click',function() {newtodo.classList.toggle('done');
+  
+  })
 let newclosebutton = document.createElement('button');
 newclosebutton.textContent='X';
 newclosebutton.classList.toggle("delete"); 
@@ -49,10 +52,6 @@ newtodo.append(newclosebutton);
 newclosebutton.addEventListener('click',(e)=>{let newclosebuttondelete  = newtodo;
    newclosebuttondelete.remove();
 
-})
-let done = newtod
-} 
-
   
 
-
+})}
