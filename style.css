@@ -15,6 +15,10 @@ header {
   padding: 10px 10px;
   box-sizing: border-box;
 }
+button{
+  border-radius: 2rem;
+  height:40px
+}
 h1{
   color: black;
 }
@@ -57,4 +61,10 @@ li:nth-child(odd) {
   position: absolute;
   right: 6px;
   top: 5px;
+}
+
+.add-list{
+  font-size: 5rem;
+
+  display:inline-block;
 }

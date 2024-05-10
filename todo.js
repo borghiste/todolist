@@ -2,6 +2,10 @@
 let addButton = document.querySelector('#add-button');     
 let inputField = document.querySelector('#todo-input');
 let todoContainer = document.querySelector('#todo-list1');
+let addList = document.querySelector('#add-list');
+let maincontainer = document.querySelector('main');
+let listInputfield = document.querySelector('#list-input');
+
 
 
 // aggiungere click listener a addButton e al click creare un todo.
@@ -24,7 +28,7 @@ suggerimenti per la classe:
 */
   //  /aggiungo event listener al bottone che con l'evento click scatenerà la funzione  con la quale assegno alla variabile todotext l'input inserito nel campo input del html (input che possiede una classe che mi è servita per assegnare con il query selector, alla variavbile inputField, l'elemento input del html)
 addButton.addEventListener('click', (e)=>{let todotext = inputField.value;
-
+console.log(inputField.value)
 
 // invoco la funzione createtodo che ha argomento todotext all'interno della funzione senza bnome usata nell'event listener del button
 createtodo(todotext);
@@ -55,3 +59,61 @@ newclosebutton.addEventListener('click',(e)=>{let newclosebuttondelete  = newtod
   
 
 })}
+
+
+addList.addEventListener('click',(e)=>{let listText = listInputfield.value;
+
+  console.log(listText);
+
+  createList(listText);
+
+
+})
+
+function createList(listText){
+  let newheader =document.createElement('header');
+  let newsection = document.createElement('section');
+  
+  
+
+
+  maincontainer.append(newsection);
+   newheader = document.createElement('header');
+  newsection.append(newheader);
+   let newh1 = document.createElement('h1');
+   newh1.textContent= listText;
+   console.log(newh1.textContent);
+  newheader.append(newh1);
+  let newtodoinput = document.createElement('input');
+  newheader.append(newtodoinput);
+  let newtodobutton = document.createElement('button');
+  console.log(newtodobutton);
+  newtodobutton.textContent='add todo';
+  newheader.append(newtodobutton);
+  newtodobutton.
+  
+
+}newtodobutton.addEventListener('click',(e)=>{
+    createnewtodoinNewList(newtodotext);
+  })
+
+
+
+  function createnewtodoinNewList(todotext){
+    let newtodo = document.createElement('li');
+     newtodo.textContent = todotext;
+  console.log(newtodo)
+  todoContainer.append(newtodo);
+   newtodo.addEventListener('click',function() {newtodo.classList.toggle('done');
+    
+    })
+  let newclosebutton = document.createElement('button');
+  newclosebutton.textContent='X';
+  newclosebutton.classList.toggle("delete"); 
+  newtodo.append(newclosebutton);
+  newclosebutton.addEventListener('click',(e)=>{let newclosebuttondelete  = newtodo;
+     newclosebuttondelete.remove();
+  
+    
+  
+  })}
