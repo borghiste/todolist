@@ -93,10 +93,10 @@ function createList(listText){
   newtodobutton.
   
 
-}newtodobutton.addEventListener('click',(e)=>{
+newtodobutton.addEventListener('click',(e)=>{
     createnewtodoinNewList(newtodotext);
   })
-
+}
 
 
   function createnewtodoinNewList(todotext){
@@ -113,7 +113,6 @@ function createList(listText){
   newtodo.append(newclosebutton);
   newclosebutton.addEventListener('click',(e)=>{let newclosebuttondelete  = newtodo;
      newclosebuttondelete.remove();
-  
-    
-  
-  })}
+
+  })
+}
