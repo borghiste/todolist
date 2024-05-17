@@ -98,15 +98,13 @@ function createnewList(listText){
   newaddButton.addEventListener('click', ()=>{let newtodotext =newtodoinput.value;
 newtodoinput = document.createElement('li');
    newtodoinput.textContent = newtodotext;
-   newSection.append(newtodoinput);
-})}
-
-// newtodobutton.addEventListener('click',let createnewtodoinNewList= (newtodotext)=>{
-
-
-// }
-//     let createNewAddButton=()=>{let newaddButton = document.createElement('button');
-//   newaddButton.textContent= 'add todo');
-// }
-// }
-    
+   newSection.append(newtodoinput)
+   let newclosebuttoninNewlist = document.createElement('button');
+newclosebuttoninNewlist.textContent='X';
+newclosebuttoninNewlist.classList.toggle("delete"); 
+newtodoinput.append(newclosebuttoninNewlist);
+newclosebutton.addEventListener('click',(e)=>{let newclosebuttondelete  = newtodo;
+   newclosebuttondelete.remove();
+})})
+}
+  
