@@ -65,8 +65,7 @@ addList.addEventListener('click',(e)=>{let listText = listInputfield.value;
 
   console.log(listText);
 
-   createnewList(listText);
-  })
+   {createnewList(listText)}})
 
 
 
@@ -75,16 +74,15 @@ addList.addEventListener('click',(e)=>{let listText = listInputfield.value;
   
   let newSection = document.createElement('section');
   
-// funzione per creare nuova lista con nuovo addbutton
 
+// fnzione per creare una nuova lista
 function createnewList(listText){
 
    maincontainer.append(newSection);
     newheader = document.createElement('header');
     console.log(listText);
-    newheader.innerText=listText;
    newSection.append(newheader);
-    let newh1 = document.createElement('h1');
+     let newh1 = document.createElement('h1');
     newh1.textContent= listText;
     console.log(newh1.textContent);
    newheader.append(newh1);
@@ -101,10 +99,9 @@ newtodoinput = document.createElement('li');
    newSection.append(newtodoinput)
    let newclosebuttoninNewlist = document.createElement('button');
 newclosebuttoninNewlist.textContent='X';
-newclosebuttoninNewlist.classList.toggle("delete"); 
+newclosebuttoninNewlist.classList.add('delete') 
 newtodoinput.append(newclosebuttoninNewlist);
-newclosebutton.addEventListener('click',(e)=>{let newclosebuttondelete  = newtodo;
-   newclosebuttondelete.remove();
+newclosebuttoninNewlist.addEventListener('click',(e)=>{newclosebuttoninNewlist= newtodoinput;
+  newtodoinput.remove();
 })})
 }
-  
